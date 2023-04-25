@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Survey Form</title>
 </head>
+
 <body>
-    
+  <h1 id="title">Survey Form</h1>
+  <p id="description">This is a survey form. It's a project that is part of the responsive web design course from freeCodeCamp.</p>
+  <form action="" id="survey-form">
+    <fieldset>
+      <label id="name-label" for="name">Enter Your Name: <input id="name" name="name" type="text" required placeholder="Jose Carvajal"/></label>
+      <label id="email-label" for="email">Enter Your Email: <input id="email" name="email" type="email" required placeholder="jmcj07@gmail.com"/></label>
+      <label id="number-label" for="number">Enter your age: <input id="number" type="number" name="number" min="13" max="102" placeholder="20"/></label>
+      <label for="dropdown">Which option best describes your current role?
+        <select id="dropdown" name="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Student</option>
+          <option value="2">Full Time Job</option>
+          <option value="3">Prefer not to say</option>
+          <option value="4">Other</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <p>Did you like this project?</p>
+      <label for="yes"><input id="yes" type="radio" name="like" class="inline" value="yes"/>Yes</label>
+      <label for="no"><input id="no" type="radio" name="like" class="inline" value="no"/>No</label>
+    </fieldset>
+    <fieldset>
+      <p>What technologies would you like to learn?</p>
+      <label><input type="checkbox" name="technologies" class="inline" value="react"/>React</label>
+      <label><input type="checkbox" name="technologies" class="inline" value="vue"/>Vue</label>
+      <label><input type="checkbox" name="technologies" class="inline" value="angular"/>Angular</label>
+    </fieldset>
+    <fieldset>
+      <p>Any comments or suggestions?</p>
+      <label for="comments"><textarea id="comments" name="comments" rows="5" cols="30" placeholder="Nice page!"></textarea></label>
+    </fieldset>
+    <input type="submit" value="Submit" id="submit"/>
+  </form>
 </body>
+
 </html>
